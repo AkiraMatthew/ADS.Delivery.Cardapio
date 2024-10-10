@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/UBwdVZPvTzc3fDuV9w22vBPK3KQuGVNpcPSn1borMk=",
+  "Source": "ADS.Delivery.API",
+  "BasePath": "_content/ADS.Delivery.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
