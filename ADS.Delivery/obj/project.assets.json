@@ -1034,9 +1034,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.csproj",
-      "projectName": "ADS.Delivery.API",
-      "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.csproj",
+      "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.V1.csproj",
+      "projectName": "ADS.Delivery.API.V1",
+      "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.V1.csproj",
       "packagesPath": "C:\\Users\\devas\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\obj\\",
       "projectStyle": "PackageReference",
