@@ -1,26 +1,37 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ADS.Delivery.API.V1.Controllers;
 
 
+//[ApiVersion]
 [Route("api/[controller]")]
 [ApiController]
-//[ApiVersion]
-public class ADSDAPIParamInserirPratoController : ControllerBase
+[ControllerName("cadastro-pratos")]
+public class ADSDAPIParamInserirPratoController(IADSDAplicacaoPratos _adsAplicacaoDPratos) : ControllerBase
 {
-    private readonly D_PRATO _context;
-    public ADSDAPIParamInserirPratoController(D_PRATO context)
-    {
-        _context = context;
-    }
     // Passo 1: Criar um http POST para inserir e validar a inserçao dos alimentos
     [HttpPost("inserir-prato")]
-    public IActionResult PostInserirPrato(ADSDAPIParamInserirPrato parametroPrato, ADSDAPIParamInserirCategoria parametroCategoria)
+    public IActionResult PostInserirPrato(ADSDAPIParamInserirPrato parametroPrato)
     {
-        //Passo 1.1: Validar se os parametros que chegaram sao validos(prato e categorias)
-        //Passo 1.2: Validar se o prato e a categorias já existem no cardápio
-        //Passo 1.3: 
+        try
+        {
+            //Passo 1.1: Validar se os parametros que chegaram sao validos(prato e categorias)
+            //Este passo se passa antes da inserçao do material
+            var resultadoValidacaoDadosDeEntrada = parametroPrato.ValidarPropsDeEntradaPrato();
+            if (!resultadoValidacaoDadosDeEntrada.Resultado)
+                return BadRequest(resultadoValidacaoDadosDeEntrada.Mensagem);
+            //Passo 1.2: Validar se o prato e a categoria que foram recebidos já existem no cardápio
+
+            //Passo 1.3: 
+
+            return Ok();
+        }
+        catch (Exception ex) 
+        {
+            return BadRequest(ex.Message);
+        }
     }
 
     // Passo 2: Criar um GET para receber os Dados inseridos através do nome do alimento, se o prato existir

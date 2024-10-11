@@ -1,6 +1,6 @@
 ﻿namespace ADS.Delivery.API.V1;
 
-public interface IADSDAplicacaoAlimentos
+public interface IADSDRepositorioPratos
 {
     void InserirPrato(D_PRATO prato, D_CATEG categoria);
     void ListaPratosInserir(List<D_PRATO> pratos);
