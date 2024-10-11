@@ -3,21 +3,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ADS.Delivery.API.V1;
 
-[Table("D_PRT")]
-public class D_PRT
+[Table("D_PRATO")]
+public class D_PRATO
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //geracao automatica do Id
-    [Column("PRT_ID")]
+    [Column("PRATO_ID")]
     public int PrtId { get; set; }
 
-    [Column("PRT_NOME")]
+    [Column("PRATO_NOME")]
     public string PrtNome { get; set; }
 
-    [Column("PRT_DESC")]
+    [Column("PRATO_DESC")]
     public string PrtDesc { get; set; }
 
-    [Column("PRT_PRECO")]
+    [Column("PRATO_PRECO")]
     public decimal PrtPreco { get; set; }
 
     [Column("CATEG_ID")]

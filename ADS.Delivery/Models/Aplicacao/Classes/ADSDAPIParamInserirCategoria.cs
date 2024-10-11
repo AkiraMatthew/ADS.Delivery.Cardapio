@@ -3,5 +3,5 @@
 public class ADSDAPIParamInserirCategoria
 {
     public string CategoriaNome { get; set; }  
-    public List<ADSDAPIParamInserirPratos> Pratos { get; set; }
+    public List<ADSDAPIParamInserirPrato> Pratos { get; set; }
 }

@@ -2,5 +2,5 @@
 
 public class ADSARepositorioCategorias
 {
-
+    D_CATEG? ConsultarCategoriaPorNome(string categoriaNome);
 }

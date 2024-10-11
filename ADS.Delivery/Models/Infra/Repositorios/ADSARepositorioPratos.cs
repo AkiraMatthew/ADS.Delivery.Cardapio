@@ -1,5 +1,5 @@
 ﻿namespace ADS.Delivery.API.V1;
 
-public class ADSARepositorioAlimentos
+public class ADSARepositorioPratos
 {
 }

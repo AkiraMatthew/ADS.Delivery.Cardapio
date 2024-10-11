@@ -1,6 +1,6 @@
 ﻿namespace ADS.Delivery.API.V1;
 
-public class ADSDAPIParamInserirPratos
+public class ADSDAPIParamInserirPrato
 {
     public string PratoNome { get; set; }
     public string PratoDescricao { get; set; }
