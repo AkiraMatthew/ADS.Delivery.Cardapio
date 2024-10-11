@@ -18,7 +18,7 @@ builder.Services.AddDbContext<ADSBDEFContextoBaseInMemory>(options =>
 
 #region Versionando API
 //Versionando a API
-builder.Services.AddApiVersioning(option =>
+/*builder.Services.AddApiVersioning(option =>
 {
     option.AssumeDefaultVersionWhenUnspecified = true; //This ensures if client doesn't specify an API version. The default version should be considered. 
     option.DefaultApiVersion = new ApiVersion(1, 0); //This we set the default API version
@@ -33,7 +33,7 @@ builder.Services.AddApiVersioning(option =>
 }).AddApiExplorer(options => {
     options.GroupNameFormat = "'v'VVV"; //The say our format of our version number “‘v’major[.minor][-status]”
     options.SubstituteApiVersionInUrl = true; //This will help us to resolve the ambiguity when there is a routing conflict due to routing template one or more end points are same.
-});
+});*/
 #endregion
 
 var app = builder.Build();

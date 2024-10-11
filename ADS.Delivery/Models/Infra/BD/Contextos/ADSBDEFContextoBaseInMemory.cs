@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ADS.Delivery.API.V1;
 
 namespace ADS.Delivery.API.V1;
 
@@ -10,16 +9,18 @@ public class ADSBDEFContextoBaseInMemory: DbContext
         
     }
 
-    public DbSet<D_ALI> Alimentos { get; set; }
+    public DbSet<D_PRT> Pratos { get; set; }
     public DbSet<D_CATEG> Categorias { get; set; }
+    public DbSet<ADS.Delivery.API.V1.ADSDAPIParamInserirAlimento> ADSDAPIParamInserirPrato { get; set; } = default!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<D_ALI>()
+        modelBuilder.Entity<D_PRT>().HasKey(alimento => alimento.PrtId);
+
+        modelBuilder.Entity<D_PRT>()
             .HasOne(alimento => alimento.Categoria)
-            .WithMany(categoria => categoria.Alimentos)
+            .WithMany(categoria => categoria.Pratos)
             .HasForeignKey(alimento => alimento.CategId);
     }
 
-public DbSet<ADS.Delivery.API.V1.ADSDAPIParamInserirAlimento> ADSDAPIParamInserirAlimento { get; set; } = default!;
 }

@@ -237,3 +237,6 @@ C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\obj\Debug\net8.0\refint\AD
 C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\obj\Debug\net8.0\ADS.Delivery.API.V1.pdb
 C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\obj\Debug\net8.0\ADS.Delivery.API.V1.genruntimeconfig.cache
 C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\obj\Debug\net8.0\ref\ADS.Delivery.API.V1.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Asp.Versioning.Http.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
