@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ADS.Delivery.API.V1;
 
 namespace ADS.Delivery.API.V1;
 
@@ -19,4 +20,6 @@ public class ADSBDEFContextoBaseInMemory: DbContext
             .WithMany(categoria => categoria.Alimentos)
             .HasForeignKey(alimento => alimento.CategId);
     }
+
+public DbSet<ADS.Delivery.API.V1.ADSDAPIParamInserirAlimento> ADSDAPIParamInserirAlimento { get; set; } = default!;
 }

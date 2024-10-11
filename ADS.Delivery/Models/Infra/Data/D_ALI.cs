@@ -10,8 +10,8 @@ public class D_ALI
     [Column("ALI_ID")]
     public int AliId { get; set; }
 
-    [Column("NOME_CATEG")]
-    public string NomeCateg { get; set; }
+    [Column("ALI_NOME")]
+    public string AliNome { get; set; }
 
     [Column("ALI_DESC")]
     public string AliDesc { get; set; }
