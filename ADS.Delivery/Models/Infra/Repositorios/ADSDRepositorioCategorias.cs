@@ -10,7 +10,7 @@ public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
         return listaDeCategorias;
     }
 
-    public List<string> ConsultarTodasCategoriasNome()
+    public List<string> ConsultarTodosNomesDeCategoria()
     {
         var listaDeCategoriasPorNome = _contextoADS.Categorias.Select(c => c.CategNome).ToList();
 

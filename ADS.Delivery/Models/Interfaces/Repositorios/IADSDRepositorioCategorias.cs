@@ -2,7 +2,7 @@
 
 public interface IADSDRepositorioCategorias
 {
-    List<string> ConsultarTodasCategoriasNome();
+    List<string> ConsultarTodosNomesDeCategoria();
     List<D_CATEG> ConsultarTodasCategorias();
     D_CATEG ConsultarCategoriaPorNome(string nomePrato);
 }
