@@ -12,7 +12,7 @@ public class ADSDRepositorioPratos : IADSDRepositorioPratos
         _contextoADS = contextoADS;
     }
 
-    public D_PRATO? ConsultarPratoComCategoria(string nomePrato)
+    public D_PRATO ConsultarPratoComCategoria(string nomePrato)
     {
         var pratoComCategoria = _contextoADS.Pratos
             .Include(prato => prato.Categoria)
@@ -21,7 +21,7 @@ public class ADSDRepositorioPratos : IADSDRepositorioPratos
         return pratoComCategoria;
     }
 
-    public D_PRATO? ConsultarPratoPorNome(string nomePrato)
+    public D_PRATO ConsultarPratoPorNome(string nomePrato)
     {
         var prato = _contextoADS.Pratos.FirstOrDefault(p => p.PratoNome == nomePrato);
 
@@ -31,26 +31,29 @@ public class ADSDRepositorioPratos : IADSDRepositorioPratos
         return prato;
     }
 
-    public void InserirPrato(D_PRATO prato, List<D_CATEG> categorias)
+    public void InserirPrato(D_PRATO prato, D_CATEG categoria)
     {
-        _contextoADS.Add(prato);
+        //.1 Verificar se a categoria ja existe no BD
+        var categoriaExistente = _contextoADS.Categorias
+            .FirstOrDefault(c => c.CategNome == categoria.CategNome);
 
-        if (categorias != null && categorias.Count > 0)
-            for (int i = 0; i < categorias.Count; i++)
-                _contextoADS.Add(categorias[i]);
+        //.2 Se nao existir, cria a categoria e associa o prato à essa categoria
+        if (categoriaExistente is null)
+        {
+            _contextoADS.Categorias.Add(categoria);
+            _contextoADS.SaveChanges();
+            prato.CategId = categoria.CategId;
+        } 
+        else
+        prato.CategId = categoriaExistente.CategId;
 
+       //.3 Adicionar o prato ao contexto com a categoria já associada
+       _contextoADS.Pratos.Add(prato);
         _contextoADS.SaveChanges();
     }
 
     public void ListaPratosInserir(List<D_PRATO> pratos, List<D_CATEG> categorias)
     {
-        for (int i = 0; i < pratos.Count; i++)
-            _contextoADS.Add(pratos);
-
-        if (categorias != null && categorias.Count > 0)
-            for (int i = 0; i < categorias.Count; i++)
-                _contextoADS.Add(categorias[i]);
-
-        _contextoADS.SaveChanges();
+        throw new NotImplementedException();
     }
 }

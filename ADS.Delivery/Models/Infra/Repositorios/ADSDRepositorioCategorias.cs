@@ -17,6 +17,13 @@ public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
         return listaDeCategoriasPorNome;
     }
 
+    public D_CATEG InserirCategoria(D_CATEG nomeCategoria)
+    {
+        _contextoADS.Add(nomeCategoria);
+
+        _contextoADS.SaveChanges();
+    }
+
     D_CATEG IADSDRepositorioCategorias.ConsultarCategoriaPorNome(string nomeCategoria)
     {
         var categoria = _contextoADS.Categorias.FirstOrDefault(c => c.CategNome == nomeCategoria);
