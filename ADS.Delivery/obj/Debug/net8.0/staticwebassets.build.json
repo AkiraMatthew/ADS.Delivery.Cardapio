@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "/UBwdVZPvTzc3fDuV9w22vBPK3KQuGVNpcPSn1borMk=",
-  "Source": "ADS.Delivery.API",
-  "BasePath": "_content/ADS.Delivery.API",
+  "Hash": "wMkQmsQT276l8mUXow1mDPJg2+E6dFSVphcj9FjGqds=",
+  "Source": "ADS.Delivery.API.V1",
+  "BasePath": "_content/ADS.Delivery.API.V1",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

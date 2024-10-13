@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ADS.Delivery.API.V1.props" />
+</Project>
