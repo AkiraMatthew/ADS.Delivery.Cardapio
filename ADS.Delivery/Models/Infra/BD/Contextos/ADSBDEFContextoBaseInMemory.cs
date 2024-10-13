@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ADS.Delivery.API.V1.Parametros;
+using Microsoft.EntityFrameworkCore;
 
 namespace ADS.Delivery.API.V1;
 
@@ -11,7 +12,7 @@ public class ADSBDEFContextoBaseInMemory: DbContext
 
     public DbSet<D_PRATO> Pratos { get; set; }
     public DbSet<D_CATEG> Categorias { get; set; }
-    public DbSet<ADS.Delivery.API.V1.ADSDAPIParamInserirPrato> ADSDAPIParamInserirPrato { get; set; } = default!;
+    public DbSet<ADSDAPIParamInserirPrato> ADSDAPIParamInserirPrato { get; set; } = default!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

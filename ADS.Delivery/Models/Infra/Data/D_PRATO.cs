@@ -9,16 +9,16 @@ public class D_PRATO
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //geracao automatica do Id
     [Column("PRATO_ID")]
-    public int PrtId { get; set; }
+    public int PratoId { get; set; }
 
     [Column("PRATO_NOME")]
-    public string PrtNome { get; set; }
+    public string PratoNome { get; set; }
 
     [Column("PRATO_DESC")]
-    public string PrtDesc { get; set; }
+    public string PratoDesc { get; set; }
 
     [Column("PRATO_PRECO")]
-    public decimal PrtPreco { get; set; }
+    public decimal PratoPreco { get; set; }
 
     [Column("CATEG_ID")]
     public int CategId { get; set; }

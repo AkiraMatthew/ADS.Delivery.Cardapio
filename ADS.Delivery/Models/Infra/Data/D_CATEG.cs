@@ -14,5 +14,5 @@ public class D_CATEG
     [Column("CATEG_NOME")]
     public string CategNome { get; set; }
 
-    public List<D_PRT> Pratos { get; set; }
+    public List<D_PRATO> Pratos { get; set; }
 }

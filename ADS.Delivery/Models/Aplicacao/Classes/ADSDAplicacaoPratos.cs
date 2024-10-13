@@ -1,4 +1,6 @@
 ﻿
+using ADS.Delivery.API.V1.Parametros;
+
 namespace ADS.Delivery.API.V1;
 
 public class ADSDAplicacaoPratos : IADSDAplicacaoPratos

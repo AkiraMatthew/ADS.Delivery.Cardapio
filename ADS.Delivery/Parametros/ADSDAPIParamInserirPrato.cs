@@ -1,10 +1,10 @@
-﻿namespace ADS.Delivery.API.V1;
+﻿namespace ADS.Delivery.API.V1.Parametros;
 
 public class ADSDAPIParamInserirPrato
 {
     #region Parametros
     public required string PratoNome { get; set; } = string.Empty;
-    public required string PratoDescricao { get; set; } = string.Empty ;
+    public required string PratoDescricao { get; set; } = string.Empty;
     public required decimal PratoPreco { get; set; } = 0;
     public required string CategoriaNome { get; set; } = string.Empty;
     #endregion
@@ -22,18 +22,18 @@ internal static class ADSValidadorPratoParam
     {
         #region Verificacoes
         var validacaoNome = VerificacaoString(prato.PratoNome);
-        if(!validacaoNome.Resultado)
+        if (!validacaoNome.Resultado)
             return validacaoNome;
 
         var validacaoDescricao = VerificacaoString(prato.PratoDescricao);
-        if(!validacaoDescricao.Resultado) 
+        if (!validacaoDescricao.Resultado)
             return validacaoDescricao;
 
         var validacaoCategoria = VerificacaoString(prato.CategoriaNome);
-        if(!validacaoCategoria.Resultado)
+        if (!validacaoCategoria.Resultado)
             return validacaoCategoria;
 
-        if (prato.PratoPreco < 0) 
+        if (prato.PratoPreco < 0)
             return (false, $"O preço do prato deve ser maior ou igual a 0");
         #endregion
 

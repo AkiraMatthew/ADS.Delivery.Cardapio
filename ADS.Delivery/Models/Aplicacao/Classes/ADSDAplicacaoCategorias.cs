@@ -4,7 +4,7 @@ namespace ADS.Delivery.API.V1;
 
 public class ADSDAplicacaoCategorias : IADSDAplicacaoCategorias
 {
-    public ADSARepositorioCategorias ConsultarCategoriaPorNome(string categoria)
+    public ADSDRepositorioCategorias ConsultarCategoriaPorNome(string categoria)
     {
         throw new NotImplementedException();
     }

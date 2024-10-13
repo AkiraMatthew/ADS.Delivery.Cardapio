@@ -1,7 +1,9 @@
-﻿namespace ADS.Delivery.API.V1;
+﻿using ADS.Delivery.API.V1.Parametros;
+
+namespace ADS.Delivery.API.V1;
 
 public interface IADSDAplicacaoCategorias
 {
-    ADSARepositorioCategorias ConsultarCategoriaPorNome(string categoria);
+    ADSDRepositorioCategorias ConsultarCategoriaPorNome(string categoria);
     List<ADSDAPIParamInserirCategoria> ConsultarTodasCategorias();
 }

@@ -1,7 +1,7 @@
-﻿namespace ADS.Delivery.API.V1;
+﻿namespace ADS.Delivery.API.V1.Parametros;
 
 public class ADSDAPIParamInserirCategoria
 {
-    public string CategoriaNome { get; set; }  
+    public string CategoriaNome { get; set; }
     public List<ADSDAPIParamInserirPrato> Pratos { get; set; }
 }
