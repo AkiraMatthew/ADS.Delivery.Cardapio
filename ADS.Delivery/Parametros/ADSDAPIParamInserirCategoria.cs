@@ -2,6 +2,6 @@
 
 public class ADSDAPIParamInserirCategoria
 {
-    public string CategoriaNome { get; set; }
-    public List<ADSDAPIParamInserirPrato> Pratos { get; set; }
+    public required string CategoriaNome { get; set; } = string.Empty;
+    public required List<ADSDAPIParamInserirPrato> Pratos { get; set; } = new List<ADSDAPIParamInserirPrato>();
 }

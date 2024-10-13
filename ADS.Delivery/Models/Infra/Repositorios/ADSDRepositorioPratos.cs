@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+
 namespace ADS.Delivery.API.V1;
 
 public class ADSDRepositorioPratos : IADSDRepositorioPratos
@@ -8,6 +10,15 @@ public class ADSDRepositorioPratos : IADSDRepositorioPratos
     public ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory contextoADS)
     {
         _contextoADS = contextoADS;
+    }
+
+    public D_PRATO? ConsultarPratoComCategoria(string nomePrato)
+    {
+        var pratoComCategoria = _contextoADS.Pratos
+            .Include(prato => prato.Categoria)
+            .FirstOrDefault(prato => prato.PratoNome == nomePrato);
+
+        return pratoComCategoria;
     }
 
     public D_PRATO? ConsultarPratoPorNome(string nomePrato)
