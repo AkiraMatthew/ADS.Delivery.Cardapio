@@ -18,14 +18,17 @@ public class ADSDAPIParamInserirPratoController(IADSDAplicacaoPratos _adsAplicac
     {
         try
         {
-            //Passo 1.1: Validar se os parametros que chegaram sao validos(prato e categorias)
+            // Passo 1.1: Validar se os parametros que chegaram sao validos(prato e categorias)
             //Este passo se passa antes da inserçao do material
             var resultadoValidacaoDadosDeEntrada = parametroPrato.ValidarPropsDeEntradaPrato();
             if (!resultadoValidacaoDadosDeEntrada.Resultado)
                 return BadRequest(resultadoValidacaoDadosDeEntrada.Mensagem);
-            //Passo 1.2: Validar se o prato e a categoria que foram recebidos já existem no cardápio
-
-            //Passo 1.3: 
+            // Passo 1.2 desenvolver método para validar os parametros de categoria
+            // Passo 1.3: Validar se o prato e a categoria que foram recebidos já existem no cardápio
+            var pratoConsultado = _adsAplicacaoDPratos.ConsultarPratoPorNomeECategoria(parametroPrato.PratoNome, parametroPrato.CategoriaNome);
+            if(pratoConsultado is not null)
+                return BadRequest("Este prato já existe");
+            // Passo 1.4: 
 
             return Ok();
         }

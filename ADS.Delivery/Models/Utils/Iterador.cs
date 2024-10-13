@@ -1,8 +1,8 @@
-﻿namespace ADS.Delivery.API.V1;
+﻿namespace ADS.Delivery.API.V1.Models.Utils;
 
-internal static class Iterador(ADSBDEFContextoBaseInMemory _contextoADS)
+internal class Iterador(ADSBDEFContextoBaseInMemory _contextoADS)
 {
-    internal static IterarPratosOuCategs(string parametro)
+    internal IterarPratosOuCategs(string parametro)
     {
         for (int i = 0; i < parametro.Count; i++)
             _contextoADS.Add(parametro);

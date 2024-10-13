@@ -3,20 +3,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ADS.Delivery.API.V1;
 
-public class ADSDRepositorioPratos : IADSDRepositorioPratos
+public class ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory _contextoADS) 
+    : IADSDRepositorioPratos
 {
-    private readonly ADSBDEFContextoBaseInMemory _contextoADS;
-
-    public ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory contextoADS)
-    {
-        _contextoADS = contextoADS;
-    }
-
     public D_PRATO ConsultarPratoComCategoria(string nomePrato)
     {
         var pratoComCategoria = _contextoADS.Pratos
             .Include(prato => prato.Categoria)
             .FirstOrDefault(prato => prato.PratoNome == nomePrato);
+
+        if (pratoComCategoria is null)
+            throw new Exception("O prato ou a categoria nao existem");
 
         return pratoComCategoria;
     }
@@ -25,7 +22,7 @@ public class ADSDRepositorioPratos : IADSDRepositorioPratos
     {
         var prato = _contextoADS.Pratos.FirstOrDefault(p => p.PratoNome == nomePrato);
 
-        if (prato == null)
+        if (prato is null)
             throw new Exception("O prato nao existe.");
 
         return prato;
