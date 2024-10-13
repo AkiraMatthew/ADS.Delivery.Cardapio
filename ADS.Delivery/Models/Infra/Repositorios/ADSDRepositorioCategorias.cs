@@ -17,10 +17,15 @@ public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
         return listaDeCategoriasPorNome;
     }
 
-    public D_CATEG InserirCategoria(D_CATEG nomeCategoria)
+    public void InserirCategoria(D_CATEG categoria)
     {
-        _contextoADS.Add(nomeCategoria);
+        var categoriaExistente = _contextoADS.Categorias
+            .FirstOrDefault(c => c.CategNome == categoria.CategNome);
 
+        if (categoriaExistente is not null)
+            throw new Exception($"A categoria {categoria} já existe no Banco de Dados");
+
+        _contextoADS.Categorias.Add(categoria);
         _contextoADS.SaveChanges();
     }
 

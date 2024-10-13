@@ -16,7 +16,7 @@ public class ADSBDEFContextoBaseInMemory: DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<D_PRATO>().HasKey(alimento => alimento.PrtId);
+        modelBuilder.Entity<D_PRATO>().HasKey(alimento => alimento.PratoId);
 
         modelBuilder.Entity<D_PRATO>()
             .HasOne(alimento => alimento.Categoria)

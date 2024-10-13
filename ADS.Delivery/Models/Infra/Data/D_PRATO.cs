@@ -12,17 +12,17 @@ public class D_PRATO
     public int PratoId { get; set; }
 
     [Column("PRATO_NOME")]
-    public string PratoNome { get; set; }
+    public required string PratoNome { get; set; }
 
     [Column("PRATO_DESC")]
-    public string PratoDesc { get; set; }
+    public required string PratoDesc { get; set; }
 
     [Column("PRATO_PRECO")]
-    public decimal PratoPreco { get; set; }
+    public required decimal PratoPreco { get; set; }
 
     [Column("CATEG_ID")]
-    public int CategId { get; set; }
+    public required int CategId { get; set; }
 
     //propriedade de navegaçao para a tabela categoria
-    public D_CATEG Categoria { get; set; }
+    public required D_CATEG Categoria { get; set; }
 }
