@@ -6,8 +6,8 @@ public class ADSDAPIParamInserirPrato
     public required string PratoNome { get; set; } = string.Empty;
     public string PratoDescricao { get; set; } = string.Empty;
     public decimal PratoPreco { get; set; } = 0;
-    public int CategoriaId { get; set; }
     public string CategoriaNome { get; set; } = string.Empty;
+    public required ADSDAPIParamInserirCategoria Categoria { get; set; }
     #endregion
     public (bool Resultado, string? Mensagem) ValidarPropsDeEntradaPrato()
     {

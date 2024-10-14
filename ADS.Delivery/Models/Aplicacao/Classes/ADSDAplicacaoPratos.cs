@@ -31,29 +31,32 @@ public class ADSDAplicacaoPratos(IADSDRepositorioPratos _pratosRepositorio, IADS
 
     public void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, ADSDAPIParamInserirCategoria categoria)
     {
+        var categoriaExistente = _categoriasRepositorio.ConsultarCategoriaPorNome(prato.CategoriaNome);
+        //D_CATEG categBD;
+        if (categoriaExistente is null)
+            throw new Exception("Categoria nao encontrada");
+            //categBD = categoriaExistente;
+
+        //categBD = new D_CATEG
+        //{
+        //    CategNome = prato.CategoriaNome,
+        //    Pratos = new List<D_PRATO>()
+        //};
+
+        //_categoriasRepositorio.InserirCategoria(categBD);
+
         var pratoBD = new D_PRATO
         {
             PratoNome = prato.PratoNome,
             PratoDesc = prato.PratoDescricao,
             PratoPreco = prato.PratoPreco,
-            Categoria = prato.CategoriaNome
+            CategId = categoriaExistente!.CategId,
+            Categoria = categoriaExistente
         };
 
-        // 3. Verificar se a categoria já existe pelo nome
-        var categoriaExistente = _categoriasRepositorio.ConsultarCategoriaPorNome(prato.CategoriaNome);
-        if (categoriaExistente != null)
-            pratoBD.CategId = categoriaExistente.CategId;
+        //categBD.Pratos.Add(pratoBD);
 
-        var categBD = new D_CATEG
-        {
-            CategNome = prato.CategoriaNome,
-            Pratos = new List<D_PRATO> { pratoBD }
-        };
-
-        _categoriasRepositorio.InserirCategoria(categBD);
-        pratoBD.CategId = categBD.CategId;
-
-        _pratosRepositorio.InserirPrato(pratoBD, categBD);
+        _pratosRepositorio.InserirPrato(pratoBD, categoriaExistente);
     }
     public void InserirListaPratosNaCategoria(List<ADSDAPIParamInserirPrato> pratos)
     {
