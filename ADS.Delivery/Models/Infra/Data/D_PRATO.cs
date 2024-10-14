@@ -20,6 +20,9 @@ public class D_PRATO
     [Column("PRATO_PRECO")]
     public decimal PratoPreco { get; set; }
 
+    [Column("CATEG_ID")]
+    public int CategId { get; set; }
+
     //propriedade de navegaçao para a tabela categoria
     public required D_CATEG Categoria { get; set; }
 }
