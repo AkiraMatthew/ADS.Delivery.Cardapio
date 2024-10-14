@@ -38,12 +38,14 @@ public class ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory _contextoADS)
         if (categoriaExistente is null)
         {
             _contextoADS.Categorias.Add(categoria);
-            _contextoADS.SaveChanges();
             prato.CategId = categoria.CategId;
         } 
         else
-        prato.CategId = categoriaExistente.CategId;
-
+        {
+            prato.Categoria = categoriaExistente;
+            prato.CategId = categoriaExistente.CategId;
+            categoriaExistente.Pratos.Add(prato);
+        }
        //.3 Adicionar o prato ao contexto com a categoria já associada
        _contextoADS.Pratos.Add(prato);
         _contextoADS.SaveChanges();

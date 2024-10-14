@@ -6,4 +6,5 @@ public interface IADSDRepositorioPratos
     void ListaPratosInserir(List<D_PRATO> pratos, List<D_CATEG> categorias);
     D_PRATO ConsultarPratoPorNome(string nomePrato);
     D_PRATO ConsultarPratoComCategoria(string nomePrato);
+    void InserirPrato(D_PRATO pratoBD);
 }
