@@ -14,26 +14,28 @@ public class ADSDAPIParamInserirPratoController(IADSDAplicacaoPratos _adsAplicac
 {
     // Passo 1: Criar um http POST para inserir e validar a inserçao dos alimentos
     [HttpPost("inserir-prato")]
-    public IActionResult PostInserirPrato(ADSDAPIParamInserirPrato parametroPrato, ADSDAPIParamInserirCategoria parametroCategoria)
+    public IActionResult PostInserirPrato([FromBody] ADSAPIInserirPratoECategoriaParam parametro)
     {
         try
         {
             // Passo 1: Validar os parametros
-            var resultadoValidacaoDadosDeEntradaPrato = parametroPrato.ValidarPropsDeEntradaPrato();
+            var resultadoValidacaoDadosDeEntradaPrato = parametro.Prato.ValidarPropsDeEntradaPrato();
             if (!resultadoValidacaoDadosDeEntradaPrato.Resultado)
                 return BadRequest(resultadoValidacaoDadosDeEntradaPrato.Mensagem);
             
-            var resultadoValidacaoDadosDeEntradaCategoria = parametroPrato.ValidarPropsDeEntradaCategoria();
+            var resultadoValidacaoDadosDeEntradaCategoria = parametro.Categoria.ValidarPropsDeEntradaCategoria();
             if(!resultadoValidacaoDadosDeEntradaCategoria.Resultado)
                 return BadRequest(resultadoValidacaoDadosDeEntradaCategoria.Mensagem);
             
             // Passo 2: Validar se o prato e a categoria que foram recebidos já existem no cardápio
-            var pratoConsultado = _adsAplicacaoDPratos.ConsultarPratoPorNomeECategoria(parametroPrato.PratoNome, parametroPrato.CategoriaNome);
+            var pratoConsultado = _adsAplicacaoDPratos.ConsultarPratoPorNomeECategoria(parametro.Prato.PratoNome, parametro.Categoria.CategoriaNome);
             if(pratoConsultado is not null)
                 return BadRequest("Este prato já existe");
 
-            // Passo 3: Inserir prato dentro da categoria no cardápio
-            _adsAplicacaoDPratos.InserirPratoNaCategoria(parametroPrato, parametroCategoria.CategoriaNome);
+            // Passo 3: Se a categoria nao existir, criar uma nova
+
+            // Passo 4: Inserir prato dentro da categoria no cardápio
+            _adsAplicacaoDPratos.InserirPratoNaCategoria(parametro, parametro.Categoria);
 
             return Ok();
         }

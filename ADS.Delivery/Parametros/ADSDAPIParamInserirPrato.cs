@@ -3,20 +3,13 @@
 public class ADSDAPIParamInserirPrato
 {
     #region Parametros
-    public required string PratoNome { get; set; } = string.Empty;
+    public string PratoNome { get; set; } = string.Empty;
     public string PratoDescricao { get; set; } = string.Empty;
     public decimal PratoPreco { get; set; } = 0;
     public string CategoriaNome { get; set; } = string.Empty;
-    public required ADSDAPIParamInserirCategoria Categoria { get; set; }
+    public ADSDAPIParamInserirCategoria Categoria { get; set; } = new ADSDAPIParamInserirCategoria();
     #endregion
     public (bool Resultado, string? Mensagem) ValidarPropsDeEntradaPrato()
-    {
-        var resultado = ADSValidadorPratoParam.ValidarEntrada(this);
-
-        return resultado.Resultado ? (true, string.Empty) : (false, resultado.Mensagem);
-    }
-
-    public (bool Resultado, string? Mensagem) ValidarPropsDeEntradaCategoria()
     {
         var resultado = ADSValidadorPratoParam.ValidarEntrada(this);
 

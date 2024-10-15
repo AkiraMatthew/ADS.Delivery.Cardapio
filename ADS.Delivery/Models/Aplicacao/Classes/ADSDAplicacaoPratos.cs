@@ -3,7 +3,11 @@ using ADS.Delivery.API.V1.Parametros;
 
 namespace ADS.Delivery.API.V1;
 
-public class ADSDAplicacaoPratos(IADSDRepositorioPratos _pratosRepositorio, IADSDRepositorioCategorias _categoriasRepositorio) : IADSDAplicacaoPratos
+public class ADSDAplicacaoPratos(
+    IADSDRepositorioPratos _pratosRepositorio, 
+    IADSDRepositorioCategorias _categoriasRepositorio, 
+    IADSDAplicacaoCategorias _categoriasAplicacao) 
+    : IADSDAplicacaoPratos
 {
     public ADSDAPIParamInserirPrato ConsultarPratoPorNome(string pratoNome)
     {
@@ -31,19 +35,9 @@ public class ADSDAplicacaoPratos(IADSDRepositorioPratos _pratosRepositorio, IADS
 
     public void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, ADSDAPIParamInserirCategoria categoria)
     {
-        var categoriaExistente = _categoriasRepositorio.ConsultarCategoriaPorNome(prato.CategoriaNome);
-        //D_CATEG categBD;
+        var categoriaExistente = _categoriasAplicacao.ConsultarCategoriaPorNome(prato.CategoriaNome);
         if (categoriaExistente is null)
-            throw new Exception("Categoria nao encontrada");
-            //categBD = categoriaExistente;
-
-        //categBD = new D_CATEG
-        //{
-        //    CategNome = prato.CategoriaNome,
-        //    Pratos = new List<D_PRATO>()
-        //};
-
-        //_categoriasRepositorio.InserirCategoria(categBD);
+            _categoriasAplicacao.InserirCategoria(categoria);
 
         var pratoBD = new D_PRATO
         {
@@ -53,8 +47,6 @@ public class ADSDAplicacaoPratos(IADSDRepositorioPratos _pratosRepositorio, IADS
             CategId = categoriaExistente!.CategId,
             Categoria = categoriaExistente
         };
-
-        //categBD.Pratos.Add(pratoBD);
 
         _pratosRepositorio.InserirPrato(pratoBD, categoriaExistente);
     }
