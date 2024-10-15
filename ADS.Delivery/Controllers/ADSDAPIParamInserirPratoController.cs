@@ -35,7 +35,7 @@ public class ADSDAPIParamInserirPratoController(IADSDAplicacaoPratos _adsAplicac
             // Passo 3: Se a categoria nao existir, criar uma nova
 
             // Passo 4: Inserir prato dentro da categoria no cardápio
-            _adsAplicacaoDPratos.InserirPratoNaCategoria(parametro, parametro.Categoria);
+            _adsAplicacaoDPratos.InserirPratoNaCategoria(parametro.Prato, parametro.Categoria);
 
             return Ok();
         }
