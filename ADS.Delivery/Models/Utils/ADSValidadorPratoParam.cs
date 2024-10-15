@@ -15,9 +15,9 @@ internal static class ADSValidadorPratoParam
         if (!validacaoDescricao.Resultado)
             return validacaoDescricao;
 
-        var validacaoCategoria = VerificacaoString(prato.CategoriaNome);
+        /*var validacaoCategoria = VerificacaoString(prato.CategoriaNome);
         if (!validacaoCategoria.Resultado)
-            return validacaoCategoria;
+            return validacaoCategoria;*/
 
         if (prato.PratoPreco < 0)
             return (false, $"O preço do prato deve ser maior ou igual a 0");

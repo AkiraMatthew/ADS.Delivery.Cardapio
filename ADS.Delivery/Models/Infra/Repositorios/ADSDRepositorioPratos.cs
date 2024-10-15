@@ -8,14 +8,10 @@ public class ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory _contextoADS)
 {
     public D_PRATO ConsultarPratoComCategoria(string nomePrato)
     {
-        var pratoComCategoria = _contextoADS.Pratos
+        return _contextoADS.Pratos
             .Include(prato => prato.Categoria)
-            .FirstOrDefault(prato => prato.PratoNome == nomePrato);
-
-        if (pratoComCategoria is null)
-            throw new Exception("O prato ou a categoria nao existem");
-
-        return pratoComCategoria;
+            .FirstOrDefault(prato => prato.PratoNome == nomePrato)
+            ?? throw new Exception("O prato ou a categoria nao existem"); ;
     }
 
     public D_PRATO ConsultarPratoPorNome(string nomePrato)
@@ -30,11 +26,9 @@ public class ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory _contextoADS)
 
     public void InserirPrato(D_PRATO prato, D_CATEG categoria)
     {
-        //.1 Verificar se a categoria ja existe no BD
         var categoriaExistente = _contextoADS.Categorias
             .FirstOrDefault(c => c.CategNome == categoria.CategNome);
 
-        //.2 Se nao existir, cria a categoria e associa o prato à essa categoria
         if (categoriaExistente is null)
         {
             _contextoADS.Categorias.Add(categoria);
@@ -42,12 +36,11 @@ public class ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory _contextoADS)
         } 
         else
         {
-            prato.Categoria = categoriaExistente;
             prato.CategId = categoriaExistente.CategId;
-            categoriaExistente.Pratos.Add(prato);
+            prato.Categoria = categoriaExistente;
         }
-       //.3 Adicionar o prato ao contexto com a categoria já associada
-       _contextoADS.Pratos.Add(prato);
+        
+        _contextoADS.Pratos.Add(prato);
         _contextoADS.SaveChanges();
     }
 

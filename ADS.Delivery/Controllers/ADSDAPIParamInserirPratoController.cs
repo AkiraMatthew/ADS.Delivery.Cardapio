@@ -28,14 +28,14 @@ public class ADSDAPIParamInserirPratoController(IADSDAplicacaoPratos _adsAplicac
                 return BadRequest(resultadoValidacaoDadosDeEntradaCategoria.Mensagem);
             
             // Passo 2: Validar se o prato e a categoria que foram recebidos já existem no cardápio
-            var pratoConsultado = _adsAplicacaoDPratos.ConsultarPratoPorNomeECategoria(parametro.Prato.PratoNome, parametro.Categoria.CategoriaNome);
-            if(pratoConsultado is not null)
-                return BadRequest("Este prato já existe");
+            //var pratoConsultado = _adsAplicacaoDPratos.ConsultarPratoPorNomeECategoria(parametro.Prato.PratoNome, parametro.Categoria.CategoriaNome);
+            //if(pratoConsultado is not null)
+               // return BadRequest("Este prato já existe");
 
             // Passo 3: Se a categoria nao existir, criar uma nova
 
             // Passo 4: Inserir prato dentro da categoria no cardápio
-            _adsAplicacaoDPratos.InserirPratoNaCategoria(parametro.Prato, parametro.Categoria);
+            _adsAplicacaoDPratos.InserirPratoNaCategoria(parametro.Prato, parametro.Categoria.CategoriaNome);
 
             return Ok();
         }

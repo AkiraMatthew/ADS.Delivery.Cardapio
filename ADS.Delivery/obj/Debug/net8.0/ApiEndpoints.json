@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "parametroPrato",
-        "Type": "ADS.Delivery.API.V1.Parametros.ADSDAPIParamInserirPrato",
+        "Name": "parametro",
+        "Type": "ADS.Delivery.API.V1.Parametros.ADSAPIInserirPratoECategoriaParam",
         "IsRequired": true
       }
     ],

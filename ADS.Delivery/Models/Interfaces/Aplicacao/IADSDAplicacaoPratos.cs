@@ -4,7 +4,7 @@ namespace ADS.Delivery.API.V1;
 
 public interface IADSDAplicacaoPratos
 {
-    void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, ADSDAPIParamInserirCategoria categoria);
+    void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, string categoriaNome);
     void InserirListaPratosNaCategoria(List<ADSDAPIParamInserirPrato> pratos);
     ADSDAPIParamInserirPrato ConsultarPratoPorNome(string pratoNome);
     ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome);
