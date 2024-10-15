@@ -3,14 +3,18 @@ using ADS.Delivery.API.V1.Parametros;
 
 namespace ADS.Delivery.API.V1;
 
-public class ADSDAplicacaoPratos(IADSDRepositorioPratos _pratosRepositorio) : IADSDAplicacaoPratos
+public class ADSDAplicacaoPratos(
+    IADSDRepositorioPratos _pratosRepositorio,
+    IADSDRepositorioCategorias _categoriasRepositorio,
+    IADSDAplicacaoCategorias _categoriasAplicacao) 
+    : IADSDAplicacaoPratos
 {
     public ADSDAPIParamInserirPrato ConsultarPratoPorNome(string pratoNome)
     {
         var prato = _pratosRepositorio.ConsultarPratoPorNome(pratoNome);
-        // verificar se o prato nao existe
+
         if(prato is null)
-            return null;
+            throw new Exception("O prato que você procura nao existe");
 
         ADSDAPIParamInserirPrato pratoResultadoAPI = new ADSDAPIParamInserirPrato { PratoNome = pratoNome };
 
@@ -20,23 +24,39 @@ public class ADSDAplicacaoPratos(IADSDRepositorioPratos _pratosRepositorio) : IA
     public ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome)
     {
         var prato = _pratosRepositorio.ConsultarPratoComCategoria(pratoNome);
-        // verificar se o prato nao existe
-        if (prato is null)
-            return null;
 
-        ADSDAPIParamInserirPrato pratoResultadoAPI = new ADSDAPIParamInserirPrato { PratoNome = pratoNome, CategoriaNome = categoriaNome };
+        if (prato is null)
+            throw new Exception("O prato que você procura nao existe");
+
+        ADSDAPIParamInserirPrato pratoResultadoAPI = new ADSDAPIParamInserirPrato { PratoNome = pratoNome };
 
         return pratoResultadoAPI;
     }
 
-    public void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, ADSDAPIParamInserirCategoria categoria, D_PRATO pratoBD, D_CATEG categoriaBD)
+    public void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, string categoriaNome)
     {
-        pratoBD.PratoNome = prato.PratoNome;
-        pratoBD.PratoDesc = prato.PratoDescricao;
-        pratoBD.PratoPreco = prato.PratoPreco;
-        categoriaBD.CategNome = categoria.CategoriaNome;
+        var categoriaExistente = _categoriasRepositorio.ConsultarCategoriaPorNome(categoriaNome);
+        if (categoriaExistente is null)
+        {
+            var categoriaBD = new ADSDAPIParamInserirCategoria
+            {
+                CategoriaNome = categoriaNome,
+                Pratos = new List<ADSDAPIParamInserirPrato> { prato }
+            };
+            _categoriasAplicacao.InserirCategoria(categoriaBD);
+            categoriaExistente = _categoriasRepositorio.ConsultarCategoriaPorNome(categoriaNome);
+        }
 
-        _pratosRepositorio.InserirPrato(pratoBD, categoriaBD);
+        var pratoBD = new D_PRATO
+        {
+            PratoNome = prato.PratoNome,
+            PratoDesc = prato.PratoDescricao,
+            PratoPreco = prato.PratoPreco,
+            CategId = categoriaExistente!.CategId,
+            Categoria = categoriaExistente
+        };
+        Console.WriteLine(pratoBD);
+        _pratosRepositorio.InserirPrato(pratoBD, categoriaExistente);
     }
     public void InserirListaPratosNaCategoria(List<ADSDAPIParamInserirPrato> pratos)
     {

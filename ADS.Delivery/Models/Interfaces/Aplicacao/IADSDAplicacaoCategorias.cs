@@ -4,6 +4,7 @@ namespace ADS.Delivery.API.V1;
 
 public interface IADSDAplicacaoCategorias
 {
-    ADSDRepositorioCategorias ConsultarCategoriaPorNome(string categoria);
+    void InserirCategoria (ADSDAPIParamInserirCategoria categoria);
+    D_CATEG ConsultarCategoriaPorNome(string categoriaNome);
     List<ADSDAPIParamInserirCategoria> ConsultarTodasCategorias();
 }

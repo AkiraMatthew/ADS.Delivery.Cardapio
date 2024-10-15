@@ -4,8 +4,9 @@ namespace ADS.Delivery.API.V1;
 
 public interface IADSDAplicacaoPratos
 {
-    void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, ADSDAPIParamInserirCategoria categoria, D_PRATO pratoBD, D_CATEG categoriaBD);
+    void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, string categoriaNome);
     void InserirListaPratosNaCategoria(List<ADSDAPIParamInserirPrato> pratos);
     ADSDAPIParamInserirPrato ConsultarPratoPorNome(string pratoNome);
     ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome);
 }
+// eu estava verificando

@@ -12,7 +12,6 @@ public class ADSBDEFContextoBaseInMemory: DbContext
 
     public DbSet<D_PRATO> Pratos { get; set; }
     public DbSet<D_CATEG> Categorias { get; set; }
-    public DbSet<ADSDAPIParamInserirPrato> ADSDAPIParamInserirPrato { get; set; } = default!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
