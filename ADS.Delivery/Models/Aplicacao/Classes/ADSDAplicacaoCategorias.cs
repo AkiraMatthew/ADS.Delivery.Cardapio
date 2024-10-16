@@ -29,7 +29,15 @@ public class ADSDAplicacaoCategorias(IADSDRepositorioCategorias _categoriasRepos
 
     public List<ADSDAPIParamInserirCategoria> ConsultarTodasCategorias()
     {
-        throw new NotImplementedException();
+        var categoriaBD = _categoriasRepositorio.ConsultarTodasCategorias();
+
+        var categoriasAPI = categoriaBD.Select(categoria => 
+        new ADSDAPIParamInserirCategoria 
+        { 
+            CategoriaNome = categoria.CategNome 
+        }).ToList();
+
+        return categoriasAPI;
     }
 
 }

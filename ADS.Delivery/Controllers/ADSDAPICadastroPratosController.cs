@@ -10,7 +10,10 @@ namespace ADS.Delivery.API.V1.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 [ControllerName("cadastro-pratos")]
-public class ADSDAPIParamInserirPratoController(IADSDAplicacaoPratos _adsAplicacaoDPratos) : ControllerBase
+public class ADSDAPICadastroPratosController(
+    IADSDAplicacaoPratos _adsAplicacaoDPratos,
+    IADSDAplicacaoCategorias _adsAplicacaoDCategorias) 
+    : ControllerBase
 {
     // Passo 1: Criar um http POST para inserir e validar a inserçao dos alimentos
     [HttpPost("inserir-prato")]
@@ -46,6 +49,19 @@ public class ADSDAPIParamInserirPratoController(IADSDAplicacaoPratos _adsAplicac
     }
 
     // Passo 2: Criar um GET para receber os Dados inseridos através do nome do alimento, se o prato existir
+    [HttpGet("consultar-todas-categorias")]
+    public IActionResult GetTodasCategorias() 
+    {
+        try 
+        {
+            var categoriasAPI = _adsAplicacaoDCategorias.ConsultarTodasCategorias();
+
+            return Ok(categoriasAPI);
+        } catch (Exception ex) 
+        {
+            return BadRequest(ex.Message);
+        }
+    }
     // Passo 3: Criar um PUT, verificar se o alimento existe antes de finalizar a requisiçao
     // Passo 4: Criar um DELETE que deleta através do nome passado caso o nome do prato exista
 }

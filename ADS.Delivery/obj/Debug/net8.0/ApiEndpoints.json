@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "ADS.Delivery.API.V1.Controllers.ADSDAPIParamInserirPratoController",
+    "Method": "GetTodasCategorias",
+    "RelativePath": "api/ADSDAPIParamInserirPrato/consultar-todas-categorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ADS.Delivery.API.V1.Controllers.ADSDAPIParamInserirPratoController",
     "Method": "PostInserirPrato",
     "RelativePath": "api/ADSDAPIParamInserirPrato/inserir-prato",
     "HttpMethod": "POST",
