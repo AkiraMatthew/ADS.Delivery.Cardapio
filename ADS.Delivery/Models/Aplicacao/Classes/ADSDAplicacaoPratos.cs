@@ -40,8 +40,7 @@ public class ADSDAplicacaoPratos(
         {
             var categoriaBD = new ADSDAPIParamInserirCategoria
             {
-                CategoriaNome = categoriaNome,
-                Pratos = new List<ADSDAPIParamInserirPrato> { prato }
+                CategoriaNome = categoriaNome
             };
             _categoriasAplicacao.InserirCategoria(categoriaBD);
             categoriaExistente = _categoriasRepositorio.ConsultarCategoriaPorNome(categoriaNome);

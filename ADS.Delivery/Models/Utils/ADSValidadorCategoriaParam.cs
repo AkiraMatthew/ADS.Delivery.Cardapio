@@ -11,8 +11,8 @@ internal static class ADSValidadorCategoriaParam
         if (!validacaoNome.Resultado)
             return validacaoNome;
 
-        if (categoria.Pratos.Count < 0 && categoria.Pratos is null)
-            return (false, $"O número de pratos dentro da categoria nao pode ser nulo e nem menor que 0");
+        /*if (categoria.Pratos.Count < 0 && categoria.Pratos is null)
+            return (false, $"O número de pratos dentro da categoria nao pode ser nulo e nem menor que 0");*/
         #endregion
 
         static (bool Resultado, string? Mensagem) VerificacaoString(string parametro)
