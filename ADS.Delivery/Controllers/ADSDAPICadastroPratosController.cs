@@ -1,7 +1,6 @@
 ﻿using ADS.Delivery.API.V1.Parametros;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace ADS.Delivery.API.V1.Controllers;
 

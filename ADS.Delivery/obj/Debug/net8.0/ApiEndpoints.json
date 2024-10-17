@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "ADS.Delivery.API.V1.Controllers.ADSDAPIParamInserirPratoController",
+    "ContainingType": "ADS.Delivery.API.V1.Controllers.ADSDAPICadastroPratosController",
     "Method": "GetTodasCategorias",
-    "RelativePath": "api/ADSDAPIParamInserirPrato/consultar-todas-categorias",
+    "RelativePath": "api/ADSDAPICadastroPratos/consultar-todas-categorias",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,9 +10,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ADS.Delivery.API.V1.Controllers.ADSDAPIParamInserirPratoController",
+    "ContainingType": "ADS.Delivery.API.V1.Controllers.ADSDAPICadastroPratosController",
     "Method": "PostInserirPrato",
-    "RelativePath": "api/ADSDAPIParamInserirPrato/inserir-prato",
+    "RelativePath": "api/ADSDAPICadastroPratos/inserir-prato",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
