@@ -2,9 +2,9 @@
 
 namespace ADS.Delivery.API.V1;
 
-internal static class ADSValidadorPratoParam
+public static class ADSValidadorPratoParam
 {
-    internal static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIParamInserirPrato prato)
+    public static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIParamInserirPrato prato)
     {
         #region Verificacoes
         var validacaoNome = VerificacaoString(prato.PratoNome);
