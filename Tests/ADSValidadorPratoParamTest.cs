@@ -1,10 +1,10 @@
 using Xunit;
 
-namespace Tests.Entities
+namespace 
 {
     public class ADSValidadorPratoParamTest
     {
-        private readonly 
+        private readonly
         [Fact]
         public static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIParamInserirPrato prato)
         {
