@@ -1,0 +1,7 @@
+C:\Users\devas\source\repos\ADS.Delivery\Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_ADS.Delivery.API.Testes
+C:\Users\devas\source\repos\ADS.Delivery\Tests\obj\Debug\net8.0\ADS.Delivery.API.Testes.csproj.AssemblyReference.cache
+C:\Users\devas\source\repos\ADS.Delivery\Tests\obj\Debug\net8.0\ADS.Delivery.API.Testes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\devas\source\repos\ADS.Delivery\Tests\obj\Debug\net8.0\ADS.Delivery.API.Testes.AssemblyInfoInputs.cache
+C:\Users\devas\source\repos\ADS.Delivery\Tests\obj\Debug\net8.0\ADS.Delivery.API.Testes.AssemblyInfo.cs
+C:\Users\devas\source\repos\ADS.Delivery\Tests\obj\Debug\net8.0\ADS.Delivery.API.Testes.csproj.CoreCompileInputs.cache
+C:\Users\devas\source\repos\ADS.Delivery\Tests\obj\Debug\net8.0\ADS.Delivery.API.Testes.sourcelink.json

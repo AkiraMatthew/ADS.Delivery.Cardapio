@@ -2,6 +2,7 @@
 
 public class ADSDAPIParamConsultarPrato
 {
+    public int PratoId { get; set; }
     public string PratoNome { get; set; } = string.Empty;
     public string PratoDescricao { get; set; } = string.Empty;
     public decimal PratoPreco { get; set; } = 0;
