@@ -3,7 +3,6 @@
 public class ADSDAPIParamInserirCategoria
 {
     public string CategoriaNome { get; set; } = string.Empty;
-    //public List<ADSDAPIParamInserirPrato> Pratos { get; set; } = new List<ADSDAPIParamInserirPrato>();
 
     public (bool Resultado, string? Mensagem) ValidarPropsDeEntradaCategoria()
     {
