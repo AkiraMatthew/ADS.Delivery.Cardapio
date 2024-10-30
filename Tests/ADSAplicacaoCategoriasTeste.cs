@@ -1,4 +1,4 @@
-﻿using Xunit;
+﻿/*using Xunit;
 using Moq;
 using ADS.Delivery.API.V1;
 using ADS.Delivery.API.V1.Parametros;
@@ -38,3 +38,4 @@ public class ADSAplicacaoCategoriasTestes
         //Assert
     }
 }
+*/

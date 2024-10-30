@@ -25,9 +25,9 @@ public class ADSDAPIPratosController(
             if (!resultadoValidacaoDadosDeEntradaPrato.Resultado)
                 return BadRequest(resultadoValidacaoDadosDeEntradaPrato.Mensagem);
 
-            var resultadoValidacaoDadosDeEntradaCategoria = prato.ValidarPropsDeEntradaCategoria();
+            /*var resultadoValidacaoDadosDeEntradaCategoria = prato.ValidarPropsDeEntradaCategoria();
             if (!resultadoValidacaoDadosDeEntradaCategoria.Resultado)
-                return BadRequest(resultadoValidacaoDadosDeEntradaCategoria.Mensagem);
+                return BadRequest(resultadoValidacaoDadosDeEntradaCategoria.Mensagem);*/
 
             // Passo 2: Validar se o prato e a categoria que foram recebidos já existem no cardápio
             //var pratoConsultado = _adsAplicacaoDPratos.ConsultarPratoPorNomeECategoria(prato.Prato.PratoNome, prato.Categoria.CategoriaNome);
@@ -62,8 +62,8 @@ public class ADSDAPIPratosController(
         }
     }
 
-    [HttpGet("consultar-prato/{pratoNome}")]
-    [HttpGet("consultar-categoria/{categoriaNome}")]
+    //[HttpGet("consultar-prato/{pratoNome}")]
+    //[HttpGet("consultar-categoria/{categoriaNome}")]
     // Passo 3: Criar um PUT, verificar se o alimento existe antes de finalizar a requisiçao
     // Passo 4: Criar um DELETE que deleta através do nome passado caso o nome do prato exista
 }
