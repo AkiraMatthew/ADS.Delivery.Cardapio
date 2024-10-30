@@ -6,7 +6,7 @@ public interface IADSDAplicacaoPratos
 {
     void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, string categoriaNome);
     void InserirListaPratosNaCategoria(List<ADSDAPIParamInserirPrato> pratos);
-    ADSDAPIParamInserirPrato ConsultarPratoPorNome(string pratoNome);
+    ADSDAPIParamConsultarPrato ConsultarPratoPorNome(string pratoNome);
     ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome);
 }
 // eu estava verificando

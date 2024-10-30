@@ -9,14 +9,21 @@ public class ADSDAplicacaoPratos(
     IADSDAplicacaoCategorias _categoriasAplicacao) 
     : IADSDAplicacaoPratos
 {
-    public ADSDAPIParamInserirPrato ConsultarPratoPorNome(string pratoNome)
+    public ADSDAPIParamConsultarPrato ConsultarPratoPorNome(string pratoNome)
     {
         var prato = _pratosRepositorio.ConsultarPratoPorNome(pratoNome);
 
         if(prato is null)
             throw new Exception("O prato que você procura nao existe");
 
-        ADSDAPIParamInserirPrato pratoResultadoAPI = new ADSDAPIParamInserirPrato { PratoNome = pratoNome };
+        var pratoResultadoAPI = new ADSDAPIParamConsultarPrato
+        { 
+            PratoId = prato.PratoId,
+            PratoNome = pratoNome,
+            PratoDescricao = prato.PratoDesc,
+            PratoPreco = prato.PratoPreco,
+            CategoriaNome = prato.Categoria.CategNome
+        };
 
         return pratoResultadoAPI;
     }
