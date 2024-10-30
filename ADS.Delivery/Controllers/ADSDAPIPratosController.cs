@@ -9,35 +9,35 @@ namespace ADS.Delivery.API.V1.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 [ControllerName("cadastro-pratos")]
-public class ADSDAPICadastroPratosController(
+public class ADSDAPIPratosController(
     IADSDAplicacaoPratos _adsAplicacaoDPratos,
     IADSDAplicacaoCategorias _adsAplicacaoDCategorias)
     : ControllerBase
 {
     // Passo 1: Criar um http POST para inserir e validar a inserçao dos alimentos
-    [HttpPost("inserir-prato")]
-    public IActionResult PostInserirPrato([FromBody] ADSDAPIParamInserirPrato parametro)
+    [HttpPost]
+    public IActionResult PostInserirPrato([FromBody] ADSDAPIParamInserirPrato prato, [FromQuery] string categoriaNome)
     {
         try
         {
-            // Passo 1: Validar os parametros
-            var resultadoValidacaoDadosDeEntradaPrato = parametro.ValidarPropsDeEntradaPrato();
+            // Passo 1: Validar os pratos
+            var resultadoValidacaoDadosDeEntradaPrato = prato.ValidarPropsDeEntradaPrato();
             if (!resultadoValidacaoDadosDeEntradaPrato.Resultado)
                 return BadRequest(resultadoValidacaoDadosDeEntradaPrato.Mensagem);
 
-            var resultadoValidacaoDadosDeEntradaCategoria = parametro.ValidarPropsDeEntradaCategoria();
+            var resultadoValidacaoDadosDeEntradaCategoria = prato.ValidarPropsDeEntradaCategoria();
             if (!resultadoValidacaoDadosDeEntradaCategoria.Resultado)
                 return BadRequest(resultadoValidacaoDadosDeEntradaCategoria.Mensagem);
 
             // Passo 2: Validar se o prato e a categoria que foram recebidos já existem no cardápio
-            //var pratoConsultado = _adsAplicacaoDPratos.ConsultarPratoPorNomeECategoria(parametro.Prato.PratoNome, parametro.Categoria.CategoriaNome);
+            //var pratoConsultado = _adsAplicacaoDPratos.ConsultarPratoPorNomeECategoria(prato.Prato.PratoNome, prato.Categoria.CategoriaNome);
             //if(pratoConsultado is not null)
             // return BadRequest("Este prato já existe");
 
             // Passo 3: Se a categoria nao existir, criar uma nova
 
             // Passo 4: Inserir prato dentro da categoria no cardápio
-            _adsAplicacaoDPratos.InserirPratoNaCategoria(parametro.Prato, parametro.CategoriaNome);
+            _adsAplicacaoDPratos.InserirPratoNaCategoria(prato, categoriaNome);
 
             return Ok();
         }
@@ -48,7 +48,7 @@ public class ADSDAPICadastroPratosController(
     }
 
     // Passo 2: Criar um GET para receber os Dados inseridos através do nome do alimento, se o prato existir
-    [HttpGet("consultar-todas-categorias")]
+    [HttpGet]
     public IActionResult GetTodasCategorias()
     {
         try
