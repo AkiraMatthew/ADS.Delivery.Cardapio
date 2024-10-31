@@ -14,5 +14,5 @@ public class D_CATEG
     [Column("CATEG_NOME")]
     public required string CategNome { get; set; }
 
-    public required List<D_PRATO> Pratos { get; set; } = new List<D_PRATO>();   
+    public List<D_PRATO> Pratos { get; set; } = new List<D_PRATO>();   
 }

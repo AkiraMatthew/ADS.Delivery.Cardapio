@@ -27,12 +27,36 @@ public class ADSAplicacaoPratosTestes
     public void ConsultarPratoPorNome_DeveRetornarPrato_QuandoPratoExistir() 
     {
         //Arrange -> things I'm expecting to see
-        var pratoNome = "Sushi";
+        var pratoIdMock = 1;
+        var pratoNomeMock = "Sushi";
+        var pratoDescriçaoMock = "A comida japonesa mais difundida";
+        var pratoPrecoMock = 39.99m;
+        var categoriaMock = new D_CATEG
+        {
+            CategId = 1,
+            CategNome = "japones"
+        };
+
+        var pratoDTOConsulta = new D_PRATO
+        {
+            PratoId = pratoIdMock,
+            PratoNome = pratoNomeMock,
+            PratoDesc = pratoDescriçaoMock,
+            PratoPreco = pratoPrecoMock,
+            Categoria = categoriaMock
+        };
+
+        _pratosRepositorioMock.Setup(p => p.ConsultarPratoPorNome(pratoNomeMock)).Returns(pratoDTOConsulta);
 
         //Act -> things that I'm testing in the current scenario ConsultarPratoPorNome
-        var prato = _pratosAplicacaoUnderTesting.ConsultarPratoPorNome(pratoNome);
+        var prato = _pratosAplicacaoUnderTesting.ConsultarPratoPorNome(pratoNomeMock);
 
         //Assert -> assert the values of the Act section
-        Assert.Equal(pratoNome, prato.PratoNome);
+        Assert.Equal(pratoIdMock, prato.PratoId);
+        Assert.Equal(pratoNomeMock, prato.PratoNome);
+        Assert.Equal(pratoDescriçaoMock, prato.PratoDescricao);
+        Assert.Equal(pratoPrecoMock, prato.PratoPreco);
+        Assert.Equal(categoriaMock.CategId, prato.CategoriaId);
+        Assert.Equal(categoriaMock.CategNome, prato.CategoriaNome);
     }
 }

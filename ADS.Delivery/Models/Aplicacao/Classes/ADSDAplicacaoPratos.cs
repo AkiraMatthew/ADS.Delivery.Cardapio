@@ -22,6 +22,7 @@ public class ADSDAplicacaoPratos(
             PratoNome = pratoNome,
             PratoDescricao = prato.PratoDesc,
             PratoPreco = prato.PratoPreco,
+            CategoriaId = prato.Categoria.CategId,
             CategoriaNome = prato.Categoria.CategNome
         };
 
