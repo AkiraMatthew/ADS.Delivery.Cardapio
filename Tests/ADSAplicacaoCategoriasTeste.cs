@@ -1,7 +1,7 @@
 ﻿/*using Xunit;
 using Moq;
-using ADS.Delivery.API.V1;
-using ADS.Delivery.API.V1.Parametros;
+using ADS.Delivery.Cardapio.API.V1;
+using ADS.Delivery.Cardapio.API.V1.Parametros;
 
 namespace ADS.Delivery.API.Testes;
 

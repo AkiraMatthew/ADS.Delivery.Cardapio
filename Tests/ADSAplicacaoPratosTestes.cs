@@ -1,4 +1,5 @@
-﻿using ADS.Delivery.API.V1;
+﻿using ADS.Delivery.Cardapio.API.V1;
+using ADS.Delivery.Cardapio.API.V1.Parametros;
 using Moq;
 
 namespace ADS.Delivery.API.Testes;
@@ -27,36 +28,57 @@ public class ADSAplicacaoPratosTestes
     public void ConsultarPratoPorNome_DeveRetornarPrato_QuandoPratoExistir() 
     {
         //Arrange -> things I'm expecting to see
-        var pratoIdMock = 1;
-        var pratoNomeMock = "Sushi";
-        var pratoDescriçaoMock = "A comida japonesa mais difundida";
-        var pratoPrecoMock = 39.99m;
-        var categoriaMock = new D_CATEG
+        var pratoIdMockBD = 1;
+        var pratoNomeMockBD = "sushi";
+        var pratoDescriçaoMockBD = "A comida japonesa mais difundida";
+        var pratoPrecoMockBD = 39.99m;
+        var categoriaMockBD = new D_CATEG
         {
             CategId = 1,
             CategNome = "japones"
         };
 
-        var pratoDTOConsulta = new D_PRATO
+        var pratoDTOConsulta = new ADSDAPIParamConsultarPrato
         {
-            PratoId = pratoIdMock,
-            PratoNome = pratoNomeMock,
-            PratoDesc = pratoDescriçaoMock,
-            PratoPreco = pratoPrecoMock,
-            Categoria = categoriaMock
+            PratoId = pratoIdMockBD,
+            PratoNome = pratoNomeMockBD,
+            PratoDescricao = pratoDescriçaoMockBD,
+            PratoPreco = pratoPrecoMockBD,
+            CategoriaId = categoriaMockBD.CategId,
+            CategoriaNome = categoriaMockBD.CategNome
         };
 
-        _pratosRepositorioMock.Setup(p => p.ConsultarPratoPorNome(pratoNomeMock)).Returns(pratoDTOConsulta);
+        _pratosRepositorioMock.Setup(p => p.ConsultarPratoPorNome(pratoNomeMockBD)).Returns(pratoDTOConsulta);
 
         //Act -> things that I'm testing in the current scenario ConsultarPratoPorNome
-        var prato = _pratosAplicacaoUnderTesting.ConsultarPratoPorNome(pratoNomeMock);
+        var prato = _pratosAplicacaoUnderTesting.ConsultarPratoPorNome("SusHi".ToLower());
 
         //Assert -> assert the values of the Act section
-        Assert.Equal(pratoIdMock, prato.PratoId);
-        Assert.Equal(pratoNomeMock, prato.PratoNome);
-        Assert.Equal(pratoDescriçaoMock, prato.PratoDescricao);
-        Assert.Equal(pratoPrecoMock, prato.PratoPreco);
-        Assert.Equal(categoriaMock.CategId, prato.CategoriaId);
-        Assert.Equal(categoriaMock.CategNome, prato.CategoriaNome);
+        Assert.Equal(pratoIdMockBD, prato.PratoId);
+        Assert.Equal(pratoNomeMockBD, prato.PratoNome);
+        Assert.Equal(pratoDescriçaoMockBD, prato.PratoDescricao);
+        Assert.Equal(pratoPrecoMockBD, prato.PratoPreco);
+        Assert.Equal(categoriaMockBD.CategId, prato.CategoriaId);
+        Assert.Equal(categoriaMockBD.CategNome, prato.CategoriaNome);
+    }
+
+    [Fact]
+    public void ConsultarPratoPorNome_DeveRetornarErro_QuandoPratoNaoExistir() 
+    { 
+        
+    }
+
+    [Fact]
+    public void InserirPratoNaCategoria_DeveRetornarObjetoPrato() 
+    {
+        //Arrange
+        //Act
+        //Assert
+    }
+
+    [Fact]
+    public void AtualizarPratoPorNome_DeveAtualizarUmPrato_QuandoExistir() 
+    { 
+
     }
 }

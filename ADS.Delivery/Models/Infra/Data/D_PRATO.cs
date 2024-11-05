@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
 [Table("D_PRATO")]
 public class D_PRATO

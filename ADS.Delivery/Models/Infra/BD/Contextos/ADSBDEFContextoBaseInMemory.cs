@@ -1,7 +1,7 @@
-﻿using ADS.Delivery.API.V1.Parametros;
+﻿using ADS.Delivery.Cardapio.API.V1.Parametros;
 using Microsoft.EntityFrameworkCore;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
 public class ADSBDEFContextoBaseInMemory: DbContext
 {

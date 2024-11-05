@@ -1,4 +1,4 @@
-﻿namespace ADS.Delivery.API.V1.Parametros;
+﻿namespace ADS.Delivery.Cardapio.API.V1.V1.Parametros;
 
 public class ADSDAPIParamConsultarPrato
 {
