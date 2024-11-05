@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.AspNetCore.Http.HttpResults;
+
 namespace ADS.Delivery.Cardapio.API.V1;
 
 public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
@@ -32,10 +34,13 @@ public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
 
     D_CATEG IADSDRepositorioCategorias.ConsultarCategoriaPorNome(string nomeCategoria)
     {
-        var categoria = _contextoADS.Categorias.FirstOrDefault(c => c.CategNome == nomeCategoria);
+        var categoriaExistente = _contextoADS.Categorias.FirstOrDefault(c => c.CategNome == nomeCategoria);
 
-        Console.WriteLine(categoria);
+        if(categoriaExistente is null)
+            throw new Exception($"A categoria {nomeCategoria} nao existe no Banco de Dados");
 
-        return categoria;
+        Console.WriteLine(categoriaExistente);
+
+        return categoriaExistente;
     }
 }
