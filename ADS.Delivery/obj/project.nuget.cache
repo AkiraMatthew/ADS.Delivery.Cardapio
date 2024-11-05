@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HYWWwVMi0mY=",
+  "dgSpecHash": "yek/aDbyQ5A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.V1.csproj",
+  "projectFilePath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.Cardapio.API.V1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devas\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\devas\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

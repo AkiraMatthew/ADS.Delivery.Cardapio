@@ -1,8 +1,8 @@
-﻿using ADS.Delivery.API.V1.Parametros;
+﻿using ADS.Delivery.Cardapio.API.V1.Parametros;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System.IO;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
 public class ADSDAplicacaoCategorias(IADSDRepositorioCategorias _categoriasRepositorio) : IADSDAplicacaoCategorias
 {

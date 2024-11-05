@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
 public class ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory _contextoADS) 
     : IADSDRepositorioPratos

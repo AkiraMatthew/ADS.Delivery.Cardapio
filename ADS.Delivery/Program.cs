@@ -1,4 +1,4 @@
-using ADS.Delivery.API.V1;
+using ADS.Delivery.Cardapio.API.V1;
 using Asp.Versioning;
 using Microsoft.EntityFrameworkCore;
 

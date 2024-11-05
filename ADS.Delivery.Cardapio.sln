@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADS.Delivery.API.V1", "ADS.Delivery\ADS.Delivery.API.V1.csproj", "{05A9AB1A-5FAC-4700-A13D-EDE6E06C4F2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADS.Delivery.Cardapio.API.V1", "ADS.Delivery\ADS.Delivery.Cardapio.API.V1.csproj", "{05A9AB1A-5FAC-4700-A13D-EDE6E06C4F2F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADS.Delivery.API.Testes", "Tests\ADS.Delivery.API.Testes.csproj", "{1FB4EA55-9A11-4A48-9848-E2BF725648B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADS.Delivery.Cardapio.API.Testes", "Tests\ADS.Delivery.Cardapio.API.Testes.csproj", "{1FB4EA55-9A11-4A48-9848-E2BF725648B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

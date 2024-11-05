@@ -1,6 +1,6 @@
-﻿using ADS.Delivery.API.V1.Parametros;
+﻿using ADS.Delivery.Cardapio.API.V1.Parametros;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1.V1;
 
 internal static class ADSValidadorCategoriaParam
 {

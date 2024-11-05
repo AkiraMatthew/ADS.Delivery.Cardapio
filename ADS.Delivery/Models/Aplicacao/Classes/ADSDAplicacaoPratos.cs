@@ -1,7 +1,7 @@
 ﻿
-using ADS.Delivery.API.V1.Parametros;
+using ADS.Delivery.Cardapio.API.V1.Parametros;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
 public class ADSDAplicacaoPratos(
     IADSDRepositorioPratos _pratosRepositorio,
@@ -22,21 +22,8 @@ public class ADSDAplicacaoPratos(
             PratoNome = pratoNome,
             PratoDescricao = prato.PratoDesc,
             PratoPreco = prato.PratoPreco,
-            CategoriaId = prato.Categoria.CategId,
             CategoriaNome = prato.Categoria.CategNome
         };
-
-        return pratoResultadoAPI;
-    }
-
-    public ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome)
-    {
-        var prato = _pratosRepositorio.ConsultarPratoComCategoria(pratoNome);
-
-        if (prato is null)
-            throw new Exception("O prato que você procura nao existe");
-
-        ADSDAPIParamInserirPrato pratoResultadoAPI = new ADSDAPIParamInserirPrato { PratoNome = pratoNome };
 
         return pratoResultadoAPI;
     }
@@ -59,7 +46,6 @@ public class ADSDAplicacaoPratos(
             PratoNome = prato.PratoNome,
             PratoDesc = prato.PratoDescricao,
             PratoPreco = prato.PratoPreco,
-            CategId = categoriaExistente!.CategId,
             Categoria = categoriaExistente
         };
         Console.WriteLine(pratoBD);
@@ -71,3 +57,15 @@ public class ADSDAplicacaoPratos(
     }
 
 }
+
+/*public ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome)
+{
+    var prato = _pratosRepositorio.ConsultarPratoComCategoria(pratoNome);
+
+    if (prato is null)
+        throw new Exception("O prato que você procura nao existe");
+
+    ADSDAPIParamInserirPrato pratoResultadoAPI = new ADSDAPIParamInserirPrato { PratoNome = pratoNome };
+
+    return pratoResultadoAPI;
+}*/
