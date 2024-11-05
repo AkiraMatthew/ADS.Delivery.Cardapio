@@ -1,8 +1,8 @@
-﻿using ADS.Delivery.API.V1.Parametros;
+﻿using ADS.Delivery.Cardapio.API.V1.Parametros;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ADS.Delivery.API.V1.Controllers;
+namespace ADS.Delivery.Cardapio.API.V1.Controllers;
 
 
 //[ApiVersion]
