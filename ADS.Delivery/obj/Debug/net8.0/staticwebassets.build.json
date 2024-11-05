@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "wMkQmsQT276l8mUXow1mDPJg2+E6dFSVphcj9FjGqds=",
-  "Source": "ADS.Delivery.API.V1",
-  "BasePath": "_content/ADS.Delivery.API.V1",
+  "Hash": "v+PMJiv2lCDKKV9WmUpTAZF8RAsF0RYefIPb5gydfiY=",
+  "Source": "ADS.Delivery.Cardapio.API.V1",
+  "BasePath": "_content/ADS.Delivery.Cardapio.API.V1",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

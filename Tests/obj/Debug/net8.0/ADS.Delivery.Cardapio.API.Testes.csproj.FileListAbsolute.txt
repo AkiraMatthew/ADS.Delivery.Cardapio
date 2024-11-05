@@ -1,0 +1,7 @@
+C:\Users\devas\source\repos\ADS.Delivery.Cardapio\Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_ADS.Delivery.Cardapio.API.Testes
+C:\Users\devas\source\repos\ADS.Delivery.Cardapio\Tests\obj\Debug\net8.0\ADS.Delivery.Cardapio.API.Testes.csproj.AssemblyReference.cache
+C:\Users\devas\source\repos\ADS.Delivery.Cardapio\Tests\obj\Debug\net8.0\ADS.Delivery.Cardapio.API.Testes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\devas\source\repos\ADS.Delivery.Cardapio\Tests\obj\Debug\net8.0\ADS.Delivery.Cardapio.API.Testes.AssemblyInfoInputs.cache
+C:\Users\devas\source\repos\ADS.Delivery.Cardapio\Tests\obj\Debug\net8.0\ADS.Delivery.Cardapio.API.Testes.AssemblyInfo.cs
+C:\Users\devas\source\repos\ADS.Delivery.Cardapio\Tests\obj\Debug\net8.0\ADS.Delivery.Cardapio.API.Testes.csproj.CoreCompileInputs.cache
+C:\Users\devas\source\repos\ADS.Delivery.Cardapio\Tests\obj\Debug\net8.0\ADS.Delivery.Cardapio.API.Testes.sourcelink.json
