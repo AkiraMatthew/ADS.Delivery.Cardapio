@@ -1,4 +1,6 @@
-﻿namespace ADS.Delivery.Cardapio.API.V1.V1.Parametros;
+﻿using ADS.Delivery.Cardapio.API.V1;
+
+namespace ADS.Delivery.Cardapio.API.V1.Parametros;
 
 public class ADSDAPIParamInserirCategoria
 {
