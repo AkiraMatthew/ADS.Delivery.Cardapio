@@ -1,6 +1,5 @@
-﻿namespace ADS.Delivery.API.V1.Controllers
+﻿namespace ADS.Delivery.Cardapio.API.V1.Controllers;
+
+public class ADSDAPICategoriasController
 {
-    public class ADSDAPICategoriasController
-    {
-    }
 }
