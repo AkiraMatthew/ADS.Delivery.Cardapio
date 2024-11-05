@@ -1,20 +1,22 @@
-using ADS.Delivery.API.V1;
+using ADS.Delivery.Cardapio.API.V1;
 using Asp.Versioning;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IADSDRepositorioPratos, ADSDRepositorioPratos>();
+builder.Services.AddScoped<IADSDRepositorioCategorias, ADSDRepositorioCategorias>();
+builder.Services.AddScoped<IADSDAplicacaoPratos, ADSDAplicacaoPratos>();
+builder.Services.AddScoped<IADSDAplicacaoCategorias, ADSDAplicacaoCategorias>();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 //como estamos usando a Database InMemory, só precisamos do nome da DB
 builder.Services.AddDbContext<ADSBDEFContextoBaseInMemory>(options =>
     options.UseInMemoryDatabase(builder.Configuration.GetConnectionString("BdTesteInMemory"))
 );
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 #region Versionando API
 //Versionando a API

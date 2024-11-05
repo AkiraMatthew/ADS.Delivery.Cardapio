@@ -1,11 +1,12 @@
-﻿using ADS.Delivery.API.V1.Parametros;
+﻿using ADS.Delivery.Cardapio.API.V1.Parametros;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
 public interface IADSDAplicacaoPratos
 {
-    void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, ADSDAPIParamInserirCategoria categoria, D_PRATO pratoBD, D_CATEG categoriaBD);
+    void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, string categoriaNome);
     void InserirListaPratosNaCategoria(List<ADSDAPIParamInserirPrato> pratos);
-    ADSDAPIParamInserirPrato ConsultarPratoPorNome(string pratoNome);
-    ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome);
+    ADSDAPIParamConsultarPrato ConsultarPratoPorNome(string pratoNome);
+    //ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome);
 }
+// eu estava verificando

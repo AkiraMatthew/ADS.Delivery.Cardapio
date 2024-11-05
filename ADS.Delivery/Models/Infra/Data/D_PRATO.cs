@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
 [Table("D_PRATO")]
 public class D_PRATO
@@ -18,10 +18,10 @@ public class D_PRATO
     public required string PratoDesc { get; set; }
 
     [Column("PRATO_PRECO")]
-    public required decimal PratoPreco { get; set; }
+    public decimal PratoPreco { get; set; }
 
     [Column("CATEG_ID")]
-    public required int CategId { get; set; }
+    public int CategId { get; set; }
 
     //propriedade de navegaçao para a tabela categoria
     public required D_CATEG Categoria { get; set; }

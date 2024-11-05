@@ -1,10 +1,10 @@
-﻿using ADS.Delivery.API.V1.Parametros;
+﻿using ADS.Delivery.Cardapio.API.V1.Parametros;
 
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
-internal static class ADSValidadorPratoParam
+public static class ADSValidadorPratoParam
 {
-    internal static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIParamInserirPrato prato)
+    public static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIParamInserirPrato prato)
     {
         #region Verificacoes
         var validacaoNome = VerificacaoString(prato.PratoNome);
@@ -15,9 +15,9 @@ internal static class ADSValidadorPratoParam
         if (!validacaoDescricao.Resultado)
             return validacaoDescricao;
 
-        var validacaoCategoria = VerificacaoString(prato.CategoriaNome);
+        /*var validacaoCategoria = VerificacaoString(prato.CategoriaNome);
         if (!validacaoCategoria.Resultado)
-            return validacaoCategoria;
+            return validacaoCategoria;*/
 
         if (prato.PratoPreco < 0)
             return (false, $"O preço do prato deve ser maior ou igual a 0");

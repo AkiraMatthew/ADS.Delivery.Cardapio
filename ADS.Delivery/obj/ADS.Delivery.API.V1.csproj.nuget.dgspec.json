@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.V1.csproj": {}
+    "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.API.V1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.V1.csproj": {
+    "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.API.V1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.V1.csproj",
+        "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.API.V1.csproj",
         "projectName": "ADS.Delivery.API.V1",
-        "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\ADS.Delivery.API.V1.csproj",
+        "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.API.V1.csproj",
         "packagesPath": "C:\\Users\\devas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery\\obj\\",
+        "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -74,6 +74,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
             }
           },
           "imports": [

@@ -1,4 +1,4 @@
-﻿namespace ADS.Delivery.API.V1;
+﻿namespace ADS.Delivery.Cardapio.API.V1;
 
 public interface IADSDRepositorioPratos
 {

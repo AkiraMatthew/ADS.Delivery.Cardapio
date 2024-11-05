@@ -1,5 +1,5 @@
 ﻿
-namespace ADS.Delivery.API.V1;
+namespace ADS.Delivery.Cardapio.API.V1;
 
 public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
     : IADSDRepositorioCategorias
@@ -10,7 +10,7 @@ public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
             .FirstOrDefault(c => c.CategNome == categoria.CategNome);
 
         if (categoriaExistente is not null)
-            throw new Exception($"A categoria {categoria} já existe no Banco de Dados");
+            throw new Exception($"A categoria {categoria.CategNome} já existe no Banco de Dados");
 
         _contextoADS.Categorias.Add(categoria);
         _contextoADS.SaveChanges();
@@ -34,8 +34,7 @@ public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
     {
         var categoria = _contextoADS.Categorias.FirstOrDefault(c => c.CategNome == nomeCategoria);
 
-        if (categoria == null)
-            throw new Exception("A categoria nao existe.");
+        Console.WriteLine(categoria);
 
         return categoria;
     }

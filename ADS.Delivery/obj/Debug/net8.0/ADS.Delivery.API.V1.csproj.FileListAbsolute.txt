@@ -240,3 +240,16 @@ C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\obj\Debug\net8.0\ref\ADS.D
 C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
 C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Asp.Versioning.Http.dll
 C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\xunit.abstractions.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\xunit.assert.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\xunit.core.dll
+C:\Users\devas\source\repos\ADS.Delivery\ADS.Delivery\bin\Debug\net8.0\xunit.execution.dotnet.dll
