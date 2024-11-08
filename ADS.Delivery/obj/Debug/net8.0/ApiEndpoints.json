@@ -2,7 +2,7 @@
   {
     "ContainingType": "ADS.Delivery.Cardapio.API.V1.Controllers.ADSDAPIPratosController",
     "Method": "PostInserirPrato",
-    "RelativePath": "api/ADSDAPIPratos",
+    "RelativePath": "api/cadastro-pratos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -23,7 +23,7 @@
   {
     "ContainingType": "ADS.Delivery.Cardapio.API.V1.Controllers.ADSDAPIPratosController",
     "Method": "GetTodasCategorias",
-    "RelativePath": "api/ADSDAPIPratos",
+    "RelativePath": "api/cadastro-pratos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

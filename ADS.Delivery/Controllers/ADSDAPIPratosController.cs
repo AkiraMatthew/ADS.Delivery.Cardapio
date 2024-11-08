@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ADS.Delivery.Cardapio.API.V1.Controllers;
 
 
-//[ApiVersion]
+[ApiVersion(1)]
 [Route("api/[controller]")]
 [ApiController]
 [ControllerName("cadastro-pratos")]
