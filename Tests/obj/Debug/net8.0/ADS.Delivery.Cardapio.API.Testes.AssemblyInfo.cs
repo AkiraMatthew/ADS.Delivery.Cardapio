@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ADS.Delivery.Cardapio.API.Testes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce572a6797bf2647c06930f03ad49599c38b872a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0281868b882c8cd9ebd377bcff433538aba09e23")]
 [assembly: System.Reflection.AssemblyProductAttribute("ADS.Delivery.Cardapio.API.Testes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ADS.Delivery.Cardapio.API.Testes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

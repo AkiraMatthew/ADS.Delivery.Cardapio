@@ -15,6 +15,11 @@ public class ADSDAPIPratosController(
     : ControllerBase
 {
     // Passo 1: Criar um http POST para inserir e validar a inserçao dos alimentos
+    /// <summary>
+    /// Insert a new dish in a pre-existing category
+    /// </summary>
+    /// <param name="categoriaNome">The category where the dish is being inserted</param>
+    /// <returns>The object with the dish inserted inside the category</returns>
     [HttpPost]
     public IActionResult PostInserirPrato([FromBody] ADSDAPIParamInserirPrato prato, [FromQuery] string categoriaNome)
     {

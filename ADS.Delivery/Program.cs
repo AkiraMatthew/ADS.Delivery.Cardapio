@@ -75,7 +75,7 @@ var app = builder.Build();
     {
         options.SwaggerEndpoint($"/swagger/v1/swagger.json", "Akira Digital Solutions - Cardápio Delivery API v1");
         options.DocumentTitle = "Cardápio API Documentation";
-        options.RoutePrefix = string.Empty;
+        options.RoutePrefix = "swagger";
     });
 
 
