@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj": {}
+    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.Cardapio.API.V1.csproj": {
+    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\ADS.Delivery.Cardapio.API.V1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.Cardapio.API.V1.csproj",
+        "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\ADS.Delivery.Cardapio.API.V1.csproj",
         "projectName": "ADS.Delivery.Cardapio.API.V1",
-        "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.Cardapio.API.V1.csproj",
+        "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\ADS.Delivery.Cardapio.API.V1.csproj",
         "packagesPath": "C:\\Users\\devas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\obj\\",
+        "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -103,14 +103,14 @@
         }
       }
     },
-    "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj": {
+    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj",
+        "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj",
         "projectName": "ADS.Delivery.Cardapio.API.Testes",
-        "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj",
+        "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj",
         "packagesPath": "C:\\Users\\devas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\Tests\\obj\\",
+        "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -131,8 +131,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.Cardapio.API.V1.csproj": {
-                "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.Cardapio.API.V1.csproj"
+              "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\ADS.Delivery.Cardapio.API.V1.csproj": {
+                "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\ADS.Delivery.Cardapio.API.V1.csproj"
               }
             }
           }
