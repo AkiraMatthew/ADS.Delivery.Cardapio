@@ -2,7 +2,7 @@
 
 namespace ADS.Delivery.Cardapio.API.V1.Parametros;
 
-public class ADSDAPIParamInserirCategoria
+public class ADSDAPIInserirCategoriaDTO
 {
     public string CategoriaNome { get; set; } = string.Empty;
 

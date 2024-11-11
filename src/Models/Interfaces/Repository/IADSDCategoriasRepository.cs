@@ -1,6 +1,6 @@
 ﻿namespace ADS.Delivery.Cardapio.API.V1;
 
-public interface IADSDRepositorioCategorias
+public interface IADSDCategoriasRepository
 {
     void InserirCategoria(D_CATEG categoria);
     List<string> ConsultarTodosNomesDeCategoria();

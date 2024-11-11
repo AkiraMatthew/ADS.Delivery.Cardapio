@@ -1,6 +1,6 @@
 ﻿namespace ADS.Delivery.Cardapio.API.V1.Parametros;
 
-public class ADSDAPIParamInserirPrato
+public class ADSDAPIInserirPratoDTO
 {
     #region Parametros
     public string PratoNome { get; set; } = string.Empty;

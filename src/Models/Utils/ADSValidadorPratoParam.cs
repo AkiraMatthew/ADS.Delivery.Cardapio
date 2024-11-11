@@ -4,7 +4,7 @@ namespace ADS.Delivery.Cardapio.API.V1;
 
 public static class ADSValidadorPratoParam
 {
-    public static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIParamInserirPrato prato)
+    public static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIInserirPratoDTO prato)
     {
         #region Verificacoes
         var validacaoNome = VerificacaoString(prato.PratoNome);

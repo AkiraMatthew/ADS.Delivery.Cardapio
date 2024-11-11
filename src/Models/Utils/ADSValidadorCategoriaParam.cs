@@ -4,7 +4,7 @@ namespace ADS.Delivery.Cardapio.API.V1;
 
 internal static class ADSValidadorCategoriaParam
 {
-    internal static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIParamInserirCategoria categoria)
+    internal static (bool Resultado, string? Mensagem) ValidarEntrada(ADSDAPIInserirCategoriaDTO categoria)
     {
         #region Verificacoes
         var validacaoNome = VerificacaoString(categoria.CategoriaNome);

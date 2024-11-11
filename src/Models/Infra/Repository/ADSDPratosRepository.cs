@@ -3,8 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ADS.Delivery.Cardapio.API.V1;
 
-public class ADSDRepositorioPratos(ADSBDEFContextoBaseInMemory _contextoADS) 
-    : IADSDRepositorioPratos
+public class ADSDPratosRepository(ADSBDEFContextoBaseInMemory _contextoADS) 
+    : IADSDPratosRepository
 {
     public D_PRATO ConsultarPratoComCategoria(string nomePrato)
     {

@@ -3,11 +3,11 @@ using ADS.Delivery.Cardapio.API.V1.Parametros;
 
 namespace ADS.Delivery.Cardapio.API.V1;
 
-public class ADSDAplicacaoPratos(
-    IADSDRepositorioPratos _pratosRepositorio,
-    IADSDRepositorioCategorias _categoriasRepositorio,
-    IADSDAplicacaoCategorias _categoriasAplicacao) 
-    : IADSDAplicacaoPratos
+public class ADSDPratosService(
+    IADSDPratosRepository _pratosRepositorio,
+    IADSDCategoriasRepository _categoriasRepositorio,
+    IADSDCategoriasService _categoriasAplicacao) 
+    : IADSDPratosService
 {
     public ADSDAPIParamConsultarPrato ConsultarPratoPorNome(string pratoNome)
     {
@@ -28,12 +28,12 @@ public class ADSDAplicacaoPratos(
         return pratoResultadoAPI;
     }
 
-    public void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, string categoriaNome)
+    public void InserirPratoNaCategoria(ADSDAPIInserirPratoDTO prato, string categoriaNome)
     {
         var categoriaExistente = _categoriasRepositorio.ConsultarCategoriaPorNome(categoriaNome);
         if (categoriaExistente is null)
         {
-            var categoriaBD = new ADSDAPIParamInserirCategoria
+            var categoriaBD = new ADSDAPIInserirCategoriaDTO
             {
                 CategoriaNome = categoriaNome
             };
@@ -51,7 +51,7 @@ public class ADSDAplicacaoPratos(
         Console.WriteLine(pratoBD);
         _pratosRepositorio.InserirPrato(pratoBD, categoriaExistente);
     }
-    public void InserirListaPratosNaCategoria(List<ADSDAPIParamInserirPrato> pratos)
+    public void InserirListaPratosNaCategoria(List<ADSDAPIInserirPratoDTO> pratos)
     {
         throw new NotImplementedException();
     }

@@ -7,10 +7,10 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
-builder.Services.AddScoped<IADSDRepositorioPratos, ADSDRepositorioPratos>();
-builder.Services.AddScoped<IADSDRepositorioCategorias, ADSDRepositorioCategorias>();
-builder.Services.AddScoped<IADSDAplicacaoPratos, ADSDAplicacaoPratos>();
-builder.Services.AddScoped<IADSDAplicacaoCategorias, ADSDAplicacaoCategorias>();
+builder.Services.AddScoped<IADSDPratosRepository, ADSDPratosRepository>();
+builder.Services.AddScoped<IADSDCategoriasRepository, ADSDCategoriasRepository>();
+builder.Services.AddScoped<IADSDPratosService, ADSDPratosService>();
+builder.Services.AddScoped<IADSDCategoriasService, ADSDCategoriasService>();
 
 builder.Services.AddControllers();
 builder.Services.AddApiVersioning(

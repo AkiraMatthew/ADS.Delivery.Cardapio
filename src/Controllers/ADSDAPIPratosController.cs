@@ -10,8 +10,8 @@ namespace ADS.Delivery.Cardapio.API.V1.Controllers;
 [ApiController]
 [ControllerName("cadastro-pratos")]
 public class ADSDAPIPratosController(
-    IADSDAplicacaoPratos _adsAplicacaoDPratos,
-    IADSDAplicacaoCategorias _adsAplicacaoDCategorias)
+    IADSDPratosService _adsAplicacaoDPratos,
+    IADSDCategoriasService _adsAplicacaoDCategorias)
     : ControllerBase
 {
     // Passo 1: Criar um http POST para inserir e validar a inserçao dos alimentos
@@ -21,7 +21,7 @@ public class ADSDAPIPratosController(
     /// <param name="categoriaNome">The category name where the dish is being inserted</param>
     /// <returns>The object with the dish inserted inside the category</returns>
     [HttpPost]
-    public IActionResult PostInserirPrato([FromBody] ADSDAPIParamInserirPrato prato, [FromQuery] string categoriaNome)
+    public IActionResult PostInserirPrato([FromBody] ADSDAPIInserirPratoDTO prato, [FromQuery] string categoriaNome)
     {
         try
         {

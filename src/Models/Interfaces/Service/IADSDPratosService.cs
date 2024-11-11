@@ -2,10 +2,10 @@
 
 namespace ADS.Delivery.Cardapio.API.V1;
 
-public interface IADSDAplicacaoPratos
+public interface IADSDPratosService
 {
-    void InserirPratoNaCategoria(ADSDAPIParamInserirPrato prato, string categoriaNome);
-    void InserirListaPratosNaCategoria(List<ADSDAPIParamInserirPrato> pratos);
+    void InserirPratoNaCategoria(ADSDAPIInserirPratoDTO prato, string categoriaNome);
+    void InserirListaPratosNaCategoria(List<ADSDAPIInserirPratoDTO> pratos);
     ADSDAPIParamConsultarPrato ConsultarPratoPorNome(string pratoNome);
     //ADSDAPIParamInserirPrato ConsultarPratoPorNomeECategoria(string pratoNome, string categoriaNome);
 }

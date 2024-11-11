@@ -4,18 +4,18 @@ using Moq;
 
 namespace ADS.Delivery.API.Testes;
 
-public class ADSAplicacaoPratosTestes
+public class ADSPratosServiceTestes
 {
-    private readonly ADSDAplicacaoPratos _pratosAplicacaoUnderTesting;
-    private readonly Mock<IADSDRepositorioPratos> _pratosRepositorioMock = new Mock<IADSDRepositorioPratos>();
-    private readonly Mock<IADSDRepositorioCategorias> _categoriasRepositorioMock = new Mock<IADSDRepositorioCategorias>();
-    private readonly Mock<IADSDAplicacaoCategorias> _categoriasAplicacaoMock = new Mock<IADSDAplicacaoCategorias>();
+    private readonly ADSDPratosService _pratosAplicacaoUnderTesting;
+    private readonly Mock<IADSDPratosRepository> _pratosRepositorioMock = new Mock<IADSDPratosRepository>();
+    private readonly Mock<IADSDCategoriasRepository> _categoriasRepositorioMock = new Mock<IADSDCategoriasRepository>();
+    private readonly Mock<IADSDCategoriasService> _categoriasAplicacaoMock = new Mock<IADSDCategoriasService>();
 
 
-    public ADSAplicacaoPratosTestes()
+    public ADSPratosServiceTestes()
     {
         // With the .Object we get the repo interface
-        _pratosAplicacaoUnderTesting = new ADSDAplicacaoPratos
+        _pratosAplicacaoUnderTesting = new ADSDPratosService
             (
                 _pratosRepositorioMock.Object, 
                 _categoriasRepositorioMock.Object, 

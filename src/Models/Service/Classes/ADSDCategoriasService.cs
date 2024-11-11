@@ -4,9 +4,9 @@ using System.IO;
 
 namespace ADS.Delivery.Cardapio.API.V1;
 
-public class ADSDAplicacaoCategorias(IADSDRepositorioCategorias _categoriasRepositorio) : IADSDAplicacaoCategorias
+public class ADSDCategoriasService(IADSDCategoriasRepository _categoriasRepositorio) : IADSDCategoriasService
 {
-    public void InserirCategoria(ADSDAPIParamInserirCategoria categoria)
+    public void InserirCategoria(ADSDAPIInserirCategoriaDTO categoria)
     {
         // 1. Verificar se a categoria já existe no banco de dados
         var categoriaExistente = ConsultarCategoriaPorNome(categoria.CategoriaNome);
@@ -27,12 +27,12 @@ public class ADSDAplicacaoCategorias(IADSDRepositorioCategorias _categoriasRepos
         return _categoriasRepositorio.ConsultarCategoriaPorNome(categoriaNome);
     }
 
-    public List<ADSDAPIParamInserirCategoria> ConsultarTodasCategorias()
+    public List<ADSDAPIInserirCategoriaDTO> ConsultarTodasCategorias()
     {
         var categoriaBD = _categoriasRepositorio.ConsultarTodasCategorias();
 
         var categoriasAPI = categoriaBD.Select(categoria => 
-        new ADSDAPIParamInserirCategoria 
+        new ADSDAPIInserirCategoriaDTO 
         { 
             CategoriaNome = categoria.CategNome 
         }).ToList();

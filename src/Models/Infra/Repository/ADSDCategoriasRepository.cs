@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace ADS.Delivery.Cardapio.API.V1;
 
-public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
-    : IADSDRepositorioCategorias
+public class ADSDCategoriasRepository(ADSBDEFContextoBaseInMemory _contextoADS)
+    : IADSDCategoriasRepository
 {
     public void InserirCategoria(D_CATEG categoria)
     {
@@ -32,7 +32,7 @@ public class ADSDRepositorioCategorias(ADSBDEFContextoBaseInMemory _contextoADS)
         return listaDeCategoriasPorNome;
     }
 
-    D_CATEG IADSDRepositorioCategorias.ConsultarCategoriaPorNome(string nomeCategoria)
+    D_CATEG IADSDCategoriasRepository.ConsultarCategoriaPorNome(string nomeCategoria)
     {
         var categoriaExistente = _contextoADS.Categorias.FirstOrDefault(c => c.CategNome == nomeCategoria);
 
