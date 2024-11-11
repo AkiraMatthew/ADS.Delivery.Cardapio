@@ -7595,11 +7595,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.Cardapio.API.V1.csproj",
+      "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\ADS.Delivery.Cardapio.API.V1.csproj",
       "projectName": "ADS.Delivery.Cardapio.API.V1",
-      "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\ADS.Delivery.Cardapio.API.V1.csproj",
+      "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\ADS.Delivery.Cardapio.API.V1.csproj",
       "packagesPath": "C:\\Users\\devas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery.Cardapio\\ADS.Delivery\\obj\\",
+      "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

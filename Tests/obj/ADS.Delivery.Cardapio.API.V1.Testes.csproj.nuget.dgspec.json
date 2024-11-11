@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj": {}
+    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.V1.Testes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj": {
+    "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.V1.Testes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj",
-        "projectName": "ADS.Delivery.Cardapio.API.Testes",
-        "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.Testes.csproj",
+        "projectUniqueName": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.V1.Testes.csproj",
+        "projectName": "ADS.Delivery.Cardapio.API.V1.Testes",
+        "projectPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\ADS.Delivery.Cardapio.API.V1.Testes.csproj",
         "packagesPath": "C:\\Users\\devas\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\devas\\source\\repos\\ADS.Delivery\\ADS.Delivery.Cardapio\\Tests\\obj\\",
         "projectStyle": "PackageReference",
