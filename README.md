@@ -1,4 +1,4 @@
-# Project BackEnd Delivery.Cardapio.Api | BE
+# Project BackEnd Delivery.Cardapio.Api 
 
 ## Module Overview
 This module is an integral part of the Delivery system and is responsible for managing dishes, clients, users, and interactions. 
